@@ -1,0 +1,360 @@
+@import url('htps://fonts.googleapis.com/css?family=Lato:400,700');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  color: #505962;
+}
+
+.offset:before {
+  display: block;
+  height: 4rem;
+  margin-top: -4rem;
+}
+
+/* ==メニューバー== */
+
+nav.globalMenuSp {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: rgb(68, 134, 199);
+  color: #000;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: all 0.6s;
+  width: 100%;
+}
+
+nav.globalMenuSp ul {
+  background: rgb(253, 254, 255);
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+nav.globalMenuSp ul li {
+  font-size: 1.1em;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px dotted rgb(138, 201, 253);
+}
+
+/* 最後はラインを描かない */
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+nav.globalMenuSp ul li a {
+  display: block;
+  color: rgb(14, 9, 9);
+  padding: 1em 0;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+  transform: translateY(0%);
+}
+
+.navToggle {
+  display: block;
+  position: fixed;    /* bodyに対しての絶対位置指定 */
+  right: 20px;
+  top: 20px;
+  width: 42px;
+  height: 51px;
+  cursor: pointer;
+  z-index: 3;
+  text-align: center;
+}
+
+.navToggle span {
+  display: block;
+  position: absolute;    /* .navToggleに対して */
+  width: 30px;
+  border-bottom: solid 3px rgb(235, 21, 21);
+  -webkit-transition: .35s ease-in-out;
+  -moz-transition: .35s ease-in-out;
+  transition: .35s ease-in-out;
+  left: 6px;
+}
+
+.navToggle span:nth-child(1) {
+  top: 9px;
+}
+
+.navToggle span:nth-child(2) {
+  top: 18px;
+}
+
+.navToggle span:nth-child(3) {
+  top: 27px;
+}
+
+
+/* 最初のspanをマイナス45度に */
+.navToggle.active span:nth-child(1) {
+  top: 18px;
+  left: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.navToggle.active span:nth-child(2),
+.navToggle.active span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+  /* ==メインビジュアル== */
+  .landing {
+    background-image: url(img/86.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 60rem;
+  }
+  .caption h1 {
+    font-size: 12vw;
+    color: #d7f8ea;
+    margin-bottom: 5rem;
+    text-shadow: 1px 2px 3px #faf7f8;
+  }
+  span {
+    color: rgb(233, 16, 16);
+  }
+  .caption h3 {
+    padding-top: 10rem;
+    font-size: 2.5rem;
+    color: #f3f5ee;
+    text-shadow: 1px 2px 3px #0c0f11;
+  }
+  
+  
+
+
+
+  
+
+
+
+
+
+  /* ==自己紹介 About Me== */
+  .btn-social-circle {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #FFF;
+    width: 50px;
+    height: 50px;
+    line-height: 30px;
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: inset 0 2px 0px rgba(255, 255, 255, 0.25), inset 0 -2px 0px rgba(0, 0, 0, 0.18);
+    transition: .2s;
+  }
+  .btn-social-circle .fa {
+    line-height: 30px;
+  }
+  .btn-social-circle:hover {
+    box-shadow: none;
+  }
+  
+  .btn-social-circle--twitter {
+    background: #1da1f3;
+    border: solid 5px #1da1f3;
+  }
+  
+  .btn-social-circle--facebook {
+    background: #3b75d4;
+    border: solid 5px #3b75d4;
+  }
+  
+  .btn-social-circle--pocket {
+    background: #ef4d4d;
+    border: solid 5px #ef4d4d;
+  }
+  
+  .btn-social-circle--feedly {
+    background: #7ece46;
+    border: solid 5px #7ece46;
+  }
+  .narrow {
+    margin-bottom: 10rem;
+  }
+  .narrow p{
+    font-size: 1.5rem;
+    color: #0a0a07;
+    text-shadow: 1px 2px 3px #090b0e;
+  }
+  .narrow h1 {
+    font-size: 8vw;
+    color: #da790b;
+    text-shadow: 1px 2px 3px #090b0e;
+  }
+  .narrow h2 {
+    font-size: 10vw;
+    color: #7ae2b7;
+    text-shadow: 1px 2px 3px #ffffff;
+  }
+ .course img {
+   margin: 5vw 37vw;
+   border-radius: 50%;
+   width: 25vw;
+   height: 25vw;
+ }
+
+ /* ==Flow & Merit== */
+ .container {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.waku {
+ padding: 1em 1em;
+ margin: 1em 0;
+ font-weight: bold;
+ color: #6091d3;
+ background: #FFF;
+ border: solid 3px #6091d3;
+ border-radius: 10px;
+}
+.waku p {
+ margin: 0; 
+ padding: 0;
+}
+
+.type-textbound {
+ font-size: 60px;
+ text-align: center;
+}
+ .dezain img {
+   border-radius: 50%;
+   width: 70%;
+ }
+
+/* ==My works== */
+.container {
+  padding: 10px;
+}
+.container h2 {
+  font-size: 9vw;
+}
+.work_menu a.active,
+.work_menu a:hover {
+  background-color: rgb(212, 20, 20);
+  color: #fff  !important;
+}
+.work_item {
+  position: relative;
+  padding: 15px;
+}
+
+.work_box {
+  overflow: hidden;
+  position: relative;
+}
+
+.work_box .work_img {
+  position: relative;
+  overflow: hidden;
+}
+
+.work_box .work_img:after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+
+.work_box .work_img>img {
+  transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
+  border-radius: 0;
+}
+
+.work_box .work_detail {
+  opacity: 0;
+  color: #ffffff;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+
+.work_box .work_detail h4 {
+  font-size: 18px;
+}
+
+.work_box .work_detail p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.work_box:hover .work_detail {
+  top: 50%;
+  transform: translate(0, -50%);
+  opacity: 1;
+}
+
+.work_box:hover .work_img:after {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.work_box:hover .work_img>img {
+  transform: scale(1.05);
+}
+
+/* お問い合わせ */
+footer {
+  background-color: #40474e;
+  color: white;
+  padding: 2rem 0 2rem;
+  margin-top: -1rem;
+  margin-top: 8rem;
+}
+footer img{
+  height: 5rem;
+  margin: 1.5rem 0;
+  border-radius: 50%;
+}
+footer a {
+  color: white;
+}
+footer svg.svg-inline--fa {
+  font-size: 1.6rem;
+  margin: 1.2rem .5rem 0 0;
+}
+footer svg.svg-inline--fa:hover {
+  color: #1ebba3!important;
+}
+hr.socket {
+  width: 100%;
+  border-top: 0.3rem solid #666b71;
+  margin-top: 3vw;
+}
+.wrap {
+  overflow: hidden;
+}
